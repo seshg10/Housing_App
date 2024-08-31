@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Housing App</title>
+</head>
+<body>
+<h1> Housing App</h1>
+<form method="POST" action="/">
+    <tr>
+    {% for field in form %}
+    {% if field.id != 'csrf_token' %}
+        <th>{{ field.label }}</th>
+        <td>{{ field }}</td>
+        <br/>
+    {% endif %}
+{% endfor %}
+        </tr>
+
+{% block results %}
+<hr/>
+
+        <input type="submit" value="Go">
+</form>
+{% endblock %}
+</body>
+</html>

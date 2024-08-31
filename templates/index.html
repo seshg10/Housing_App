@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Housing App</title>
+</head>
+<body>
+<h1> Housing App</h1>
+<form method="POST" >
+    <h4>Cost of House</h4>
+    <input type="number" id="hcost" step="0.01" min="0" name="hcost">
+    <h4>Interest Rate</h4>
+    <input type="number" id="hint" step="0.01" min="0" max="8" name="hint">
+    <h4> Term of Loan (Fixed) </h4>
+    <select name="term_loan" >
+        <option value="15">15</option>
+        <option value="30">30</option>
+    </select>
+    <br/>
+    <hr/>
+    <input type="submit" name ="submit" value="Submit">
+</form>
+{% block results %}
+<hr/>
+{% endblock %}
+</body>
+
+</html>
